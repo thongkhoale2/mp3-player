@@ -16,12 +16,19 @@ function Playing() {
       <AudioPlayer
         className="player-music"
         src={song.url}
-        layout="stacked-reverse"
+        layout="stacked"
         showSkipControls={true}
         showJumpControls={false}
         onClickNext={handleClickNext}
         onClickPrevious={handleClickPrevious}
+        autoPlay={true}
+        customProgressBarSection={[
+          RHAP_UI.CURRENT_TIME,
+          RHAP_UI.PROGRESS_BAR,
+          RHAP_UI.CURRENT_LEFT_TIME,
+        ]}
       />
+      {console.log({ AudioPlayer })}
     </div>
   );
 }

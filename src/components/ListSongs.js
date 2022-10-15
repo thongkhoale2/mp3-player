@@ -33,7 +33,7 @@ function ListSongs(props) {
             <>
               <tr
                 key={index}
-                className={`bg-slate-800 h-12 text-gray-500 hover:bg-gray-700 ${
+                className={`bg-slate-800 h-12 text-gray-500  select-none hover:bg-gray-700 hover:text-gray-400 ${
                   idSong === song.id && "text-teal-400 bg-gray-700"
                 }`}
                 onClick={() => handleChooseSong(song.id)}

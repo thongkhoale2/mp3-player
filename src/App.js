@@ -12,7 +12,12 @@ function App() {
   //set song in App, so that it can be used in other components
   const [song, setSong] = useState(DataSongs[0]);
   const handleSetSong = (id) => {
-    if (id < 0) id = 0;
+    if (id < 0) {
+      id = 0;
+    }
+    if (id >= DataSongs.length) {
+      id = 0;
+    }
     const song = DataSongs.find((song) => song.id === id);
 
     setSong(song);
